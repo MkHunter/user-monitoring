@@ -1,8 +1,9 @@
-/**
- * Author: Miguel Ernesto López
-*   Description:- Tests for the ReportRecordCountEventCondition class
-*   Created:- 16/11/2021
- **/
+/*
+*   Author: Miguel Ernesto López Malacón
+*   Description:- Case Trigger Handler Test
+*   Created:- 16/12/2021
+*   Last Updated:- 17/12/2021
+*/
 @isTest
 public class ReportRecordCountEventConditionTest {
 
