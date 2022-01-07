@@ -1,0 +1,47 @@
+<apex:page id="communitiesSelfRegPage" showHeader="false" controller="CommunitiesSelfRegController" title="{!$Label.site.user_registration}"
+  standardStylesheets="false">
+
+  <head>
+    <apex:stylesheet value="{!URLFOR($Resource.MyStyles, 'styles/styles.css')}" />
+  </head>
+  <apex:define name="body">
+    <main class="container">
+      <h2>Register</h2>
+      <apex:form id="theForm" forceSSL="true">
+        <apex:pageMessages id="error" />
+        <div class="input-field">
+          <apex:inputText required="true" id="firstName" value="{!firstName}" label="First Name" html-placeholder="First Name" />
+          <div class="underline"></div>
+        </div>
+        <div class="input-field">
+          <apex:inputText required="true" id="lastName" value="{!lastName}" label="Last Name" html-placeholder="Last Name" />
+          <div class="underline"></div>
+        </div>
+        <div class="input-field">
+          <apex:inputText required="true" id="passportNumber" value="{!passportNumber}" label="Passport Number" html-placeholder="Passport Number" />
+          <div class="underline"></div>
+        </div>
+        <div class="input-field">
+          <apex:inputText required="true" id="communityNickname" value="{!communityNickname}" label="{!$Label.site.community_nickname}"
+            html-placeholder="Nickname" />
+          <div class="underline"></div>
+        </div>
+        <div class="input-field">
+          <apex:inputText required="true" id="email" value="{!email}" label="{!$Label.site.email}" html-placeholder="Email" />
+          <div class="underline"></div>
+        </div>
+        <div class="input-field">
+          <apex:inputSecret id="password" value="{!password}" html-placeholder="Password" />
+          <div class="underline"></div>
+        </div>
+        <div class="input-field">
+          <apex:inputSecret id="confirmPassword" value="{!confirmPassword}" html-placeholder="Confirm Password" />
+          <div class="underline"></div>
+        </div>
+        <apex:outputText value="" />
+        <apex:commandButton action="{!registerUser}" value="{!$Label.site.submit}" id="submit" />
+      </apex:form>
+    </main>
+  </apex:define>
+
+</apex:page>
